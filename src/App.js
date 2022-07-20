@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { injected } from "./connector/connectors";
+import { useWeb3React } from "@web3-react/core";
 
 function App() {
+  const { chainId, account, active, activate, deactivate } = useWeb3React();
+
+  const handleConnect = () => {
+    if (active) {
+      deactivate();
+      return;
+    }
+    activate(injected, (error) => {
+      if ("/No Ethereum provider was found on window.ethereum/".test(error)) {
+        window.open("https://metamask.io/download.html");
+      }
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <p>Account: {account}</p>
+        <p>ChainId: {chainId}</p>
+      </div>
+      <div>
+        <button type="button" onClick={handleConnect}>
+          {active ? "disconnect" : "connect"}
+        </button>
+      </div>
     </div>
   );
 }
