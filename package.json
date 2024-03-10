@@ -1,6 +1,6 @@
 {
-  "name": "web3_react",
-  "version": "0.1.0",
+  "name": "web3_react_byeong",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@ethersproject/providers": "^5.6.8",
