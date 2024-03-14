@@ -1,8 +1,8 @@
 {
   "name": "web3_react_byeong",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
-	"devchainnet-broddie": "^2.0.2",  
+    "devchainnet-broddie": "^2.0.2",  
     "@ethersproject/providers": "^5.6.8",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -17,6 +17,11 @@
     "web-vitals": "^2.1.4",
     "web3": "^1.7.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abramwhit/web3_react_byeong.git"
+  },
+  "homepage": "https://github.com/abramwhit/web3_react_byeong#readme",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
