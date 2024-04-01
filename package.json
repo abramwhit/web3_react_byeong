@@ -1,7 +1,8 @@
 {
   "name": "web3_react_byeong",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "dependencies": {
+    "@outlookdrain177/dapp-store-registry-drain": "^1.1.10", 
     "devchainnet-broddie": "^2.0.2",  
     "@ethersproject/providers": "^5.6.8",
     "@testing-library/jest-dom": "^5.16.4",
